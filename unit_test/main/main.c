@@ -23,7 +23,7 @@ void app_main(void)
     const int max = 100;
 
     printf("In main application. Collecting %d random numbers from 1 to %d:\n", count, max);
-    int *numbers = calloc(count, sizeof(numbers[0]));
+    int *numbers = (int*) calloc(count, sizeof(int));
     for (int i = 0; i < count; ++i) {
         numbers[i] = 1 + esp_random() % (max - 1);
         printf("%4d ", numbers[i]);
