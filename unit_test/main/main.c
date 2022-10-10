@@ -24,7 +24,7 @@ void app_main(void)
 
     printf("In main application. Collecting %d random numbers from 1 to %d:\n", count, max);
     int *numbers = (int*) calloc(count, sizeof(int));
-    for (int i = 0; i < count; ++i) {
+    for (int i = 0; i < count; i++) {
         numbers[i] = 1 + esp_random() % (max - 1);
         printf("%4d ", numbers[i]);
         if ((i + 1) % 10 == 0) {
